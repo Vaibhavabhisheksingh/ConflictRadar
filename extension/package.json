@@ -1,0 +1,67 @@
+{
+  "name": "conflictradar",
+  "displayName": "ConflictRadar",
+  "description": "Live overlap detection — see when a teammate is editing the same function as you, before either of you saves.",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "conflictradar.hello",
+        "title": "ConflictRadar: Hello"
+      },
+      {
+        "command": "conflictradar.login",
+        "title": "ConflictRadar: Login"
+      },
+      {
+        "command": "conflictradar.logout",
+        "title": "ConflictRadar: Logout"
+      },
+      {
+        "command": "conflictradar.newProject",
+        "title": "ConflictRadar: New Project"
+      },
+      {
+        "command": "conflictradar.joinProject",
+        "title": "ConflictRadar: Join with Code"
+      }
+    ],
+    "configuration": {
+      "title": "ConflictRadar",
+      "properties": {
+        "conflictradar.backendUrl": {
+          "type": "string",
+          "default": "http://localhost:4000",
+          "description": "URL of the ConflictRadar backend (REST + Socket.io)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.25.0",
+    "@babel/traverse": "^7.25.0",
+    "socket.io-client": "^4.7.5"
+  },
+  "devDependencies": {
+    "@types/babel__traverse": "^7.20.6",
+    "@types/node": "^20.14.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.5.0"
+  }
+}
