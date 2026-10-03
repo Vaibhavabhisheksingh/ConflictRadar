@@ -1,10 +1,10 @@
 const { io } = require("socket.io-client");
 
-const BACKEND_URL = "http://localhost:4000";
+const BACKEND_URL = "https://conflictradar-backend.onrender.com";
 const PROJECT_CODE = "CR-QPAY";
 
 // Paste Naitik's JWT here
-const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWI3NWZlYTQwMmU4YjQ2YmI4YWJlODYiLCJpYXQiOjE3OTA5NDEzMzEsImV4cCI6MTc5MTU0NjEzMX0.7Y33n9rkOkCUuikVY4u1S3H5tPKPU5dLI-MtcbIfstc";
+const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YWI3NWZlYTQwMmU4YjQ2YmI4YWJlODYiLCJpYXQiOjE3OTA5ODk4ODcsImV4cCI6MTc5MTU5NDY4N30.42H8DlsktlekOcWL1zXXnladopCe7InCt6fLwntB0Gk";
 
 const socket = io(BACKEND_URL, {
     reconnection: false,
