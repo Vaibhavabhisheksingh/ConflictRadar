@@ -220,61 +220,7 @@ export function activate(context: vscode.ExtensionContext) {
         output.appendLine(`Login error: ${message}`);
       }
 
-      // try {
-      //   const res = await fetch(
-      //     `${getBackendUrl()}/auth/login`,
-      //     {
-      //       method: 'POST',
-      //       headers: {
-      //         'Content-Type': 'application/json',
-      //       },
-      //       body: JSON.stringify({
-      //         email: email.trim(),
-      //         password,
-      //       }),
-      //     }
-      //   );
-
-      //   const data = (await res.json()) as {
-      //     ok?: boolean;
-      //     token?: string;
-      //     error?: string;
-      //     user?: {
-      //       id: string;
-      //       name: string;
-      //       email: string;
-      //     };
-      //   };
-
-      //   if (!res.ok || !data.ok || !data.token) {
-      //     throw new Error(
-      //       data.error ||
-      //         'Login failed.'
-      //     );
-      //   }
-
-      //   await context.secrets.store(
-      //     'conflictradar.token',
-      //     data.token
-      //   );
-
-      //   vscode.window.showInformationMessage(
-      //     `Welcome, ${data.user?.name || 'User'}!`
-      //   );
-
-      //   output.appendLine(
-      //     `Logged in as ${data.user?.email || email}.`
-      //   );
-
-      // } catch (err: any) {
-      //   vscode.window.showErrorMessage(
-      //     `Login failed: ${err.message}`
-      //   );
-
-      //   output.appendLine(
-      //     `Login error: ${err.message}`
-      //   );
-      // }
+      
     },
   );
 
